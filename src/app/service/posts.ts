@@ -7,7 +7,7 @@ const postsAdapter = createEntityAdapter({
   sortComparer: (a: Post, b: Post) => b.date.localeCompare(a.date),
 });
 
-const initialState = postsAdapter.getInitialState();
+// const initialState = postsAdapter.getInitialState();
 
 type PostsResponse = Post[];
 
@@ -99,6 +99,26 @@ export const extendedApiSlice = apiSlice.injectEndpoints({
       }),
       invalidatesTags: (result, error, arg) => [{ type: "Post", id: arg.id }],
     }),
+    addReaction: builder.mutation({
+      query: ({ postId, reactions }) => ({
+          url: `posts/${postId}`,
+          method: 'PATCH',
+          body: { reactions }
+      }),
+      async onQueryStarted({ postId, reactions }, { dispatch, queryFulfilled }) {
+          const patchResult = dispatch(
+              extendedApiSlice.util.updateQueryData('getPosts', undefined, draft => {
+                  const post = draft[postId]
+                  if (post) post.reactions = reactions
+              })
+          )
+          try {
+              await queryFulfilled
+          } catch {
+              patchResult.undo()
+          }
+      }
+  })
   }),
 });
 
@@ -107,5 +127,6 @@ export const {
   useGetPostsByUserIdQuery,
   useAddNewPostMutation,
   useUpdatePostMutation,
-  useDeletePostMutation
+  useDeletePostMutation,
+  useAddReactionMutation
 } = extendedApiSlice
