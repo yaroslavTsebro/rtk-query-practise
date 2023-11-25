@@ -12,8 +12,8 @@ export type LinkType = {
 
 const navigation: LinkType[] = [
   { to: "/", children: "Home" },
-  { to: "/user", children: "Users" },
-  { to: "/post", children: "Post" },
+  { to: "/users", children: "Users" },
+  { to: "/posts", children: "Posts" },
 ];
 
 const Header: React.FC = () => {
