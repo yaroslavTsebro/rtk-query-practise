@@ -6,5 +6,5 @@ export class Post {
   body: string;
   userId: number;
   date: string;
-  reactions?: Reactions;
+  reactions: Reactions;
 }
