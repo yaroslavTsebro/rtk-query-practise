@@ -233,18 +233,18 @@
   ],
   "posts": [
     {
-      "id": 2,
-      "title": "qui est esse",
-      "body": "hey there",
-      "userId": 1,
-      "date": "2022-04-13T23:02:19.248Z"
-    },
-    {
       "id": 3,
       "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
       "body": "hey there!",
       "userId": 1,
-      "date": "2022-05-02T20:41:05.437Z"
+      "date": "2022-05-02T20:41:05.437Z",
+      "reactions": {
+        "thumbsUp": 0,
+        "wow": 0,
+        "heart": 2,
+        "rocket": 0,
+        "coffee": 0
+      }
     },
     {
       "id": 5,
@@ -253,10 +253,10 @@
       "userId": 1,
       "date": "2022-04-14T17:46:43.450Z",
       "reactions": {
-        "thumbsUp": 5,
+        "thumbsUp": 0,
         "wow": 0,
-        "heart": 0,
-        "rocket": 0,
+        "heart": 2,
+        "rocket": 1,
         "coffee": 0
       }
     },
@@ -276,7 +276,7 @@
       "reactions": {
         "thumbsUp": 0,
         "wow": 0,
-        "heart": 0,
+        "heart": 1,
         "rocket": 0,
         "coffee": 12
       }
@@ -891,6 +891,34 @@
         "coffee": 0
       },
       "id": 103
+    },
+    {
+      "title": "dees",
+      "body": "ewdedewdwedewdew",
+      "userId": 1,
+      "date": "2023-11-25T16:36:21.963Z",
+      "reactions": {
+        "thumbsUp": 0,
+        "wow": 0,
+        "heart": 0,
+        "rocket": 0,
+        "coffee": 0
+      },
+      "id": 104
+    },
+    {
+      "title": "dees",
+      "body": "ssaaaaaaaaaaaaaaaa",
+      "userId": 1,
+      "date": "2023-11-25T16:37:08.667Z",
+      "reactions": {
+        "thumbsUp": 0,
+        "wow": 0,
+        "heart": 0,
+        "rocket": 0,
+        "coffee": 0
+      },
+      "id": 105
     }
   ]
 }
