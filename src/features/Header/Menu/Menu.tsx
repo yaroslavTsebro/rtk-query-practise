@@ -1,4 +1,4 @@
-import styles from "./HeaderMenu.module.scss";
+import styles from "./Menu.module.scss";
 import { ClassNameChildrenProps } from "../../common/props";
 import MenuList from "./MenuList/MenuList";
 

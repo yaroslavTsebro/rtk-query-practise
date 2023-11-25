@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { LinkType } from "../Header/Header";
-import style from "./HeaderMenu.module.scss";
+import style from "./MenuItem.module.scss";
 
 const MenuItem: React.FC<LinkType> = ({ to, children }) => {
   return (
